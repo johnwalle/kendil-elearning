@@ -1,17 +1,25 @@
 @import "tailwindcss";
 
+/* Global CSS Variables */
 :root {
+  /* Brand Colors */
+  --primary: #1f3e94; /* Top-left gradient */
+  --primary-dark: #0b49a1; /* Bottom-right gradient */
+  --accent: #ff7a00; /* CTA button color */
+  --accent-hover: #e56e00;
+  --text-main: #ffffff;
+  --text-subtle: rgba(255, 255, 255, 0.9);
+
+  /* Backgrounds */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Fonts (Set these to match your font stack or Google Fonts config) */
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +27,23 @@
   }
 }
 
+/* Tailwind Theme Inline Mapping */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* Base Body Styling */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }

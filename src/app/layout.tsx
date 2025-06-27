@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Navbar from "@/components/layout/navbar";
+import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { Inter } from 'next/font/google';
 import { Poppins } from 'next/font/google';
@@ -56,7 +56,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${poppins.className} ${inter.className} ${geistMono.variable} font-sans antialiased bg-white text-gray-900 min-h-screen`}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         <Footer />
       </body>

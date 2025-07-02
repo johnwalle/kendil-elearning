@@ -1,7 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  images: {
+    domains: ['storage.googleapis.com', 'randomuser.me', 'icon2.cleanpng.com', 'www.optimal-systems.de'],
+  },
 };
-
-export default nextConfig;

@@ -12,15 +12,28 @@
     "@auth/core": "^0.34.2",
     "@headlessui/react": "^2.2.4",
     "@hookform/resolvers": "^5.1.1",
+    "@radix-ui/react-select": "^2.2.5",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/forms": "^0.5.10",
     "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dom-to-image-more": "^3.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.19.1",
+    "html-to-image": "^1.11.13",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.523.0",
     "next": "15.3.4",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.58.1",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.1",
+    "use-debounce": "^10.0.5",
     "zod": "^3.25.67"
   },
   "devDependencies": {
@@ -32,6 +45,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4.1.11",
+    "tw-animate-css": "^1.3.4",
     "typescript": "^5"
   }
 }

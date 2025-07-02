@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link href="/about" className="text-sm text-blue-900 hover:text-blue-700">About</Link>
             <Link href="/contact" className="text-sm text-blue-900 hover:text-blue-700">Contact</Link>
             <Link
-              href="/signup"
+              href="/auth/signup"
               className="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition"
             >
               Sign Up
@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link href="/about" className="text-sm text-blue-900 hover:text-blue-700">About</Link>
             <Link href="/contact" className="text-sm text-blue-900 hover:text-blue-700">Contact</Link>
             <Link
-              href="/signup"
+              href="/auth/signup"
               className="bg-orange-500 text-white text-center py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition"
             >
               Sign Up

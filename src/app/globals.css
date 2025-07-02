@@ -3,16 +3,19 @@
 /* Global CSS Variables */
 :root {
   /* Brand Colors */
-  --primary: #1f3e94; /* Top-left gradient */
-  --primary-dark: #0b49a1; /* Bottom-right gradient */
-  --accent: #ff7a00; /* CTA button color */
+  --primary: #1f3e94;
+  /* Top-left gradient */
+  --primary-dark: #0b49a1;
+  /* Bottom-right gradient */
+  --accent: #ff7a00;
+  /* CTA button color */
   --accent-hover: #e56e00;
   --text-main: #ffffff;
   --text-subtle: rgba(255, 255, 255, 0.9);
 
   /* Backgrounds */
   --background: #ffffff;
-  --foreground: #171717;
+  /* --foreground: #171717; */
 
   /* Fonts (Set these to match your font stack or Google Fonts config) */
   --font-sans: 'Inter', 'Segoe UI', sans-serif;
@@ -22,7 +25,7 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #F9FAFB;
     --foreground: #ededed;
   }
 }

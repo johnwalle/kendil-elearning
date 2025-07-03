@@ -56,7 +56,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${poppins.className} ${inter.className} ${geistMono.variable} font-sans antialiased bg-white text-gray-900 min-h-screen`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Footer />
       </body>

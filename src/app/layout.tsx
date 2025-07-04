@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
-import { Inter } from 'next/font/google';
-import { Poppins } from 'next/font/google';
+import ClientLayout from "@/components/layout/client-layout"; // ⬅️ new wrapper
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Include the weights you use
-  variable: '--font-inter', // Optional: for CSS variable usage
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
 });
 
-// Font setup
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,22 +23,20 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// app/layout.tsx
-
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
-// Metadata for SEO and accessibility
 export const metadata: Metadata = {
   title: {
     default: "Kendil – E-Learning Platform",
     template: "%s | Learnify",
   },
-  description: "Join thousands of students on Learnify — the modern E-Learning platform built for growth.",
-  metadataBase: new URL("https://www.kendil-elearning.com"), // Change to your real domain
+  description:
+    "Join thousands of students on Learnify — the modern E-Learning platform built for growth.",
+  metadataBase: new URL("https://www.kendil-elearning.com"),
   icons: {
     icon: "/favicon.ico",
   },
@@ -48,17 +44,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${poppins.className} ${inter.className} ${geistMono.variable} font-sans antialiased bg-white text-gray-900 min-h-screen`}
       >
-        {/* <Navbar /> */}
-        {children}
-        <Footer />
+        <ClientLayout>
+          {children}
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   );
